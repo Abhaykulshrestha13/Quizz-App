@@ -284,7 +284,7 @@ public class QuizActivity extends AppCompatActivity {
             if (isPresent) {
                 switch (selectedO.get(id)) {
                     case 1: {
-                        btnOption1.setTextColor(Color.WHITE);
+                        btnOption1.setTextColor(Color.BLACK);
                         btnOption2.setTextColor(Color.WHITE);
                         btnOption3.setTextColor(Color.WHITE);
                         btnOption4.setTextColor(Color.WHITE);
@@ -295,7 +295,7 @@ public class QuizActivity extends AppCompatActivity {
                         break;
                     }
                     case 2: {
-                        btnOption2.setTextColor(Color.WHITE);
+                        btnOption2.setTextColor(Color.BLACK);
                         btnOption1.setTextColor(Color.WHITE);
                         btnOption3.setTextColor(Color.WHITE);
                         btnOption4.setTextColor(Color.WHITE);
@@ -306,7 +306,7 @@ public class QuizActivity extends AppCompatActivity {
                         break;
                     }
                     case 3: {
-                        btnOption3.setTextColor(Color.WHITE);
+                        btnOption3.setTextColor(Color.BLACK);
                         btnOption2.setTextColor(Color.WHITE);
                         btnOption1.setTextColor(Color.WHITE);
                         btnOption4.setTextColor(Color.WHITE);
@@ -317,7 +317,7 @@ public class QuizActivity extends AppCompatActivity {
                         break;
                     }
                     case 4: {
-                        btnOption4.setTextColor(Color.WHITE);
+                        btnOption4.setTextColor(Color.BLACK);
                         btnOption2.setTextColor(Color.WHITE);
                         btnOption3.setTextColor(Color.WHITE);
                         btnOption1.setTextColor(Color.WHITE);
