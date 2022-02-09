@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgroundLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303234">
+
+    <LinearLayout
+        android:id="@+id/result_ll"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/dialog_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/circleView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_margin="5dp"
+            android:id="@+id/result_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="Number of correct answers = "
+            android:textColor="#00F7FF"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/submit_btn"
+        android:layout_width="50dp"
+        android:visibility="visible"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#4C6800"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_baseline_check_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
+
+    <com.github.sshadkany.shapes.CircleView
+        android:visibility="visible"
+        android:id="@+id/circleView"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shape_circle_backgroundColor="#303234"
+        app:shape_circle_dark_color="#66000000"
+        app:shape_circle_light_color="#66494949">
+
+        <com.androchef.happytimer.countdowntimer.CircularCountDownView
+            android:id="@+id/circularCountDownView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:stroke_background_color="@color/design_default_color_primary_dark"
+            app:stroke_background_thickness="31dp"
+            app:stroke_foreground_color="@color/colorLightBlue"
+            app:stroke_foreground_thickness="40dp"
+            app:timer_text_color="@color/colorLightBlue"
+            app:timer_text_format="MINUTE_SECOND"
+            app:timer_text_isBold="true"
+            app:timer_text_shown="true"
+            app:timer_text_size="20sp"
+            app:timer_type="COUNT_UP"/>
+    </com.github.sshadkany.shapes.CircleView>
+
+    <com.github.sshadkany.shapes.CircleView
+        android:id="@+id/circleView2"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shape_circle_backgroundColor="#303234"
+        app:shape_circle_dark_color="#66000000"
+        app:shape_circle_light_color="#66494949">
+
+        <TextView
+            android:id="@+id/numberQ_txt"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:text="1/10"
+            android:textColor="#FFEB3B"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.github.sshadkany.shapes.CircleView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/question_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="This is just for testing purpose?"
+                android:textColor="#00FF0A"
+                android:textSize="23dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/option_1_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/quiz_back_bg"
+                android:fontFamily="sans-serif-thin"
+                android:text="Correct answer is this 1"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/option_2_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/quiz_back_bg"
+                android:fontFamily="sans-serif-thin"
+                android:text="Correct answer is this 2"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/option_3_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/quiz_back_bg"
+                android:fontFamily="sans-serif-thin"
+                android:text="Correct answer is this 3"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/option_4_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/quiz_back_bg"
+                android:fontFamily="sans-serif-thin"
+                android:text="Correct answer is this 4"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.github.sshadkany.CircleButton
+            android:id="@+id/previous_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shape_circle_backgroundColor="#303234"
+            app:shape_circle_dark_color="#66000000"
+            app:shape_circle_light_color="#66494949"
+            app:shape_roundRect_bottomLeftRadius="100dp"
+            app:shape_roundRect_bottomRightRadius="100dp"
+            app:shape_roundRect_light_color="#66494949"
+            app:shape_roundRect_topLeftRadius="100dp"
+            app:shape_roundRect_topRightRadius="100dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:padding="32dp"
+                app:srcCompat="@drawable/abc_vector_test" />
+
+        </com.github.sshadkany.CircleButton>
+
+
+        <com.github.sshadkany.CircleButton
+            android:id="@+id/next_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shape_circle_backgroundColor="#303234"
+            app:shape_circle_dark_color="#66000000"
+            app:shape_circle_light_color="#66494949"
+            app:shape_roundRect_bottomLeftRadius="100dp"
+            app:shape_roundRect_bottomRightRadius="100dp"
+            app:shape_roundRect_light_color="#66494949"
+            app:shape_roundRect_topLeftRadius="100dp"
+            app:shape_roundRect_topRightRadius="100dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:padding="32dp"
+                app:srcCompat="@drawable/next_img" />
+        </com.github.sshadkany.CircleButton>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
