@@ -1,8 +1,7 @@
-# Dog App - Android App !
+# Quizz App - Android App !
 
 ## About
 
-An App by which you can search and download images of any dog's breed.
 
 ## Technologies Used
 
